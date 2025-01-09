@@ -1,0 +1,27 @@
+.dashboard-page {
+  display: flex;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  background-color: var(--background);
+  transition: background-color 0.3s ease;
+}
+
+.dashboard-content {
+  text-align: center;
+}
+
+.welcome {
+  font-size: 2rem;
+  color: var(--accent-color);
+}
+
+.habit-progress {
+  margin-top: 20px;
+}
+
+.habit {
+  margin: 10px 0;
+}
