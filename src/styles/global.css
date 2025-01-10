@@ -1,31 +1,122 @@
+/* Global Light Mode */
 body.light {
-    background-color: #f5f5f5; /* Light mode background */
-    color: #3d3d3d; /* Light mode text color */
-  }
-  
-  body.dark {
-    background-color: #2f4f4f; /* Dark mode background */
-    color: #fffafa; /* Dark mode text color */
-  }
-  
+  --sidebar-bg: #6a5acd; /* Purple */
+  --sidebar-text: #ffffff; /* White */
+  --sidebar-hover: #836fff; /* Light Lavender */
+  --background: #f5f5f5; /* Light background */
+  --text-color: #3d3d3d; /* Dark Text */
+  --accent-color: #836fff; /* Accent Lavender */
+  --hover-color: #6a5acd; /* Hover Purple */
+  --button-bg: #836fff; /* Button background */
+  --button-text: #ffffff; /* Button text */
+  transition: background-color 0.3s, color 0.3s;
+}
 
+/* Global Dark Mode */
+body.dark {
+  --sidebar-bg: #2f4f4f; /* Deep Slate Gray */
+  --sidebar-text: #ffffff; /* White */
+  --sidebar-hover: #6a5acd; /* Primary Purple */
+  --background: #2f4f4f; /* Deep Slate Gray */
+  --text-color: #fffafa; /* Snow White */
+  --accent-color: #6a5acd; /* Soft Purple */
+  --hover-color: #836fff; /* Light Lavender */
+  --button-bg: #6a5acd; /* Button background */
+  --button-text: #ffffff; /* Button text */
+  transition: background-color 0.3s, color 0.3s;
+}
+/* Light Mode */
+body.light, .light {
+  background-color: #f5f5f5; /* Light background */
+  color: #3d3d3d; /* Dark text for light mode */
+}
 
-  
-  :root {
-    --sidebar-bg: #708090; /* Slate Gray */
-    --sidebar-text: #ffffff; /* White Text */
-    --background: #dcdcdc; /* Gainsboro */
-    --text-light: #3d3d3d; /* Ebony */
-    --accent-color: #c3b1e1; /* Soft Lavender */
-    --hover-color: #a890d3; /* Slightly darker lavender */
-  }
-  
-  body.dark {
-    --sidebar-bg: #2f4f4f; /* Deep Slate Gray */
-    --sidebar-text: #ffffff; /* Snow White */
-    --background: #2f4f4f; /* Deep Slate Gray */
-    --text-light: #ffffff; /* Snow White */
-    --accent-color: #836fff; /* Soft Lavender */
-    --hover-color: #6a5acd; /* Primary Purple */
-  }
-  
+/* Dark Mode */
+body.dark, .dark {
+  background-color: #2f4f4f; /* Dark background */
+  color: #fffafa; /* Light text for dark mode */
+}
+
+/* Smooth Transitions */
+body, .light, .dark {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Apply background and text color dynamically */
+body {
+  background-color: var(--background);
+  color: var(--text-color);
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: var(--sidebar-bg);
+  color: var(--sidebar-text);
+}
+
+.sidebar:hover {
+  background-color: var(--sidebar-hover);
+}
+
+/* Buttons */
+button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: var(--hover-color);
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: var(--accent-color);
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: var(--hover-color);
+}
+
+/* Cards */
+.card {
+  background-color: var(--background);
+  color: var(--text-color);
+  border: 1px solid var(--accent-color);
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Progress Bar */
+progress {
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  appearance: none;
+}
+
+progress::-webkit-progress-bar {
+  background-color: #f1f1f1; /* Light gray background */
+}
+
+progress::-webkit-progress-value {
+  background: var(--accent-color); /* Gradient fill */
+}
+
+progress::-moz-progress-bar {
+  background: var(--accent-color);
+}

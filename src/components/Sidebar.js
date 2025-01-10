@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/Sidebar.css";
-import aspireLogo from "../assets/AspireSphere_Logo.png";
+
 import mayraAvatar from "../assets/profile-icon.png";
 import homeIcon from "../assets/home-icon.png";
 import addIcon from "../assets/add-icon.png";
@@ -16,46 +16,52 @@ const Sidebar = () => {
     <div className="sidebar">
       {/* Header */}
       <div className="sidebar-header">
-        <img src={aspireLogo} alt="AspireSphere Logo" className="logo" />
         <img src={mayraAvatar} alt="Mayra Avatar" className="avatar" />
-        <h3>MAYRARINIY 😊</h3>
+        <h3 className="username">MAYRARINIY 😊</h3>
       </div>
 
       {/* Menu */}
       <ul className="sidebar-menu">
         <li>
           <Link to="/dashboard">
-            <img src={homeIcon} alt="Dashboard Icon" className="menu-icon" /> Dashboard
+            <img src={homeIcon} alt="Dashboard Icon" className="menu-icon" />
+            <span>Dashboard</span>
           </Link>
         </li>
         <li>
           <Link to="/create-habit">
-            <img src={addIcon} alt="Add Habit Icon" className="menu-icon" /> Create Habit
+            <img src={addIcon} alt="Add Habit Icon" className="menu-icon" />
+            <span>Create Habit</span>
           </Link>
         </li>
         <li>
           <Link to="/track-habits">
-            <img src={trackIcon} alt="Track Habits Icon" className="menu-icon" /> Track Habits
+            <img src={trackIcon} alt="Track Habits Icon" className="menu-icon" />
+            <span>Track Habits</span>
           </Link>
         </li>
         <li>
           <Link to="/statistics">
-            <img src={statisticsIcon} alt="Statistics Icon" className="menu-icon" /> Statistics
+            <img src={statisticsIcon} alt="Statistics Icon" className="menu-icon" />
+            <span>Statistics</span>
           </Link>
         </li>
         <li>
           <Link to="/community">
-            <img src={groupsIcon} alt="Community Icon" className="menu-icon" /> Community
+            <img src={groupsIcon} alt="Community Icon" className="menu-icon" />
+            <span>Community</span>
           </Link>
         </li>
         <li>
           <Link to="/rewards">
-            <img src={rewardsIcon} alt="Rewards Icon" className="menu-icon" /> Rewards
+            <img src={rewardsIcon} alt="Rewards Icon" className="menu-icon" />
+            <span>Rewards</span>
           </Link>
         </li>
         <li>
           <Link to="/settings">
-            <img src={settingsIcon} alt="Settings Icon" className="menu-icon" /> Settings
+            <img src={settingsIcon} alt="Settings Icon" className="menu-icon" />
+            <span>Settings</span>
           </Link>
         </li>
       </ul>

@@ -5,23 +5,97 @@
 .main-content {
   flex: 1;
   padding: 20px;
-  background-color: var(--background);
-  transition: background-color 0.3s ease;
+  background-color: var(--background-light, #f8f9fa); /* Light background */
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--sidebar-bg, #6a5acd); /* Match Sidebar color */
+  color: #ffffff;
+  padding: 10px 20px;
 }
 
 .dashboard-content {
   text-align: center;
-}
-
-.welcome {
-  font-size: 2rem;
-  color: var(--accent-color);
-}
-
-.habit-progress {
   margin-top: 20px;
 }
 
+.welcome {
+  
+    font-size: 3rem; /* Adjust size */
+    font-weight: bold;
+    text-align: center;
+    background: linear-gradient(90deg, #ff99cc, #ff7eb3, #6a5acd, #5eead4); /* More Pink, Purple, Blue */
+    -webkit-background-clip: text; /* Clip gradient to text */
+    -webkit-text-fill-color: transparent; /* Make the text transparent */
+    text-fill-color: transparent; /* Standard property */
+    margin: 20px 0; /* Add spacing */
+}
+
+.dashboard-description {
+  font-size: 1.2rem; /* Slightly larger font for readability */
+  line-height: 1.8; /* Improve text spacing */
+  text-align: center; /* Center-align the text */
+  margin: 20px 0; /* Add space above and below */
+  color: #4b0082; /* Eggplant color for text */
+  font-weight: 500; /* Medium weight for better visibility */
+  font-family: "Poppins", sans-serif; /* Clean and modern font */
+  max-width: 800px; /* Limit the width for better alignment */
+  margin-left: auto; /* Center horizontally */
+  margin-right: auto; /* Center horizontally */
+}
+.add-habit-btn {
+  background: linear-gradient(90deg, #ff7eb3, #6a5acd); /* Gradient background */
+  color: white; /* White text for contrast */
+  border: none; /* Remove default border */
+  border-radius: 30px; /* Rounded button */
+  padding: 12px 25px; /* Adjust padding for size */
+  font-size: 1.2rem; /* Slightly larger text */
+  font-weight: bold; /* Emphasize text */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover animations */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.add-habit-btn:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.add-habit-btn:active {
+  transform: scale(0.95); /* Slight compression on click */
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); /* Reduce shadow */
+}
+
+.habit-progress {
+  margin-top: 30px;
+}
+.habit-progress h3 {
+  font-size: 2rem; /* Larger font size for emphasis */
+  font-weight: bold;
+  text-align: left; /* Center the heading */
+  color: #4b0082; /* Eggplant color for text */
+  margin-bottom: 20px; /* Space below the heading */
+  text-transform: uppercase; /* Make the text uppercase */
+  letter-spacing: 2px; /* Add some spacing between letters */
+  background: linear-gradient(90deg, #ff7eb3, #6a5acd); /* Gradient text */
+  -webkit-background-clip: text; /* Clip the gradient to the text */
+  -webkit-text-fill-color: transparent; /* Make text transparent to show the gradient */
+}
+
 .habit {
-  margin: 10px 0;
+  margin: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid var(--accent-text, #836fff);
+  border-radius: 5px;
+}
+
+.habit span {
+  font-size: 1rem;
+  color: var(--accent-text, #6a5acd);
 }
