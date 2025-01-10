@@ -1,40 +1,62 @@
-/* Main Content Styling */
+/* Page Layout */
 .create-habit-page {
     display: flex;
     height: 100vh;
-    overflow: hidden;
   }
   
   .main-content {
     flex: 1;
-    overflow-y: auto;
-    background: var(--background);
-    color: var(--text-color);
     padding: 20px;
+    background: var(--background, #f8f9fa);
+    color: var(--text-color, #3d3d3d);
+    overflow-y: auto;
   }
   
+  /* Header Card */
+  .header-card {
+    background-color: #563d7c; /* Purple background */
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    text-align: left;
+  }
+  
+  .header-card h2 {
+    font-size: 2rem;
+    margin: 0;
+    font-weight: bold;
+  }
+  
+  .header-card p {
+    font-size: 1.2rem;
+    margin: 5px 0 0;
+  }
+  
+  /* Form Container */
   .habit-form-container {
     max-width: 600px;
-    margin: 50px auto;
-    padding: 20px;
+    margin: 0 auto;
     background: white;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
   }
   
   .habit-form-container h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 10px;
-    color: #4b0082;
+    color: var(--primary-color, #4b0082);
   }
   
   .habit-form-container p {
-    font-size: 1.1rem;
-    color: #4b0082;
-    margin-bottom: 20px;
+    font-size: 1.2rem;
+    color: var(--primary-color, #4b0082);
+    margin-bottom: 25px;
   }
   
+  /* Form Elements */
   .form-group {
     margin-bottom: 20px;
     text-align: left;
@@ -44,29 +66,32 @@
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
-    color: #4b0082;
+    color: var(--primary-color, #4b0082);
   }
   
-  .form-group input {
+  .form-group input,
+  .form-group select {
     width: 100%;
     padding: 10px;
     font-size: 1rem;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 8px;
     box-sizing: border-box;
   }
   
-  .form-group input:focus {
-    border-color: #6a5acd;
+  .form-group input:focus,
+  .form-group select:focus {
+    border-color: var(--accent-color, #6a5acd);
     outline: none;
   }
   
+  /* Save Button */
   .save-habit-btn {
     background: linear-gradient(90deg, #ff7eb3, #6a5acd);
     color: white;
     border: none;
     padding: 12px 25px;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: bold;
     border-radius: 30px;
     cursor: pointer;
@@ -78,33 +103,29 @@
     transform: scale(1.05);
   }
   
+  /* Success Message */
   .success-message {
     margin-top: 20px;
+    background: #563d7c;
     color: white;
-    background-color: #4b0082;
     padding: 10px 15px;
-    border-radius: 5px;
+    border-radius: 8px;
     font-size: 1rem;
   }
   
-  /* Dropdown Styling */
-select {
-    width: 100%;
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-sizing: border-box;
-    background-color: white;
-    color: #4b0082; /* Eggplant color for text */
-  }
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .header-card h2 {
+      font-size: 1.8rem;
+    }
   
-  select:focus {
-    border-color: #6a5acd;
-    outline: none;
-  }
+    .habit-form-container {
+      padding: 20px;
+    }
   
-  .form-group select {
-    background: linear-gradient(90deg, #f9f9ff, #ffffff);
+    .save-habit-btn {
+      font-size: 1rem;
+      padding: 10px 20px;
+    }
   }
   

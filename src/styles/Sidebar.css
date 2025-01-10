@@ -19,7 +19,7 @@
   height: 100px;
   border-radius: 50%;
   margin-bottom: 10px;
-  border: 3px solid #c4a4ff; /* Soft lavender border */
+  border: 3px solid #8b76b4; /* Soft lavender border */
 }
 
 .username {
@@ -47,12 +47,12 @@
 }
 
 .sidebar-menu li:hover {
-  background-color: #c4a4ff; /* Light lavender on hover */
+  background-color: #83496c; /* Light lavender on hover */
   border-radius: 10px; /* Rounded edges for hover */
 }
 
 .sidebar-menu li.active {
-  background: linear-gradient(90deg, #6a5acd, #836fff); /* Gradient for active item */
+  background: linear-gradient(90deg, #3c2ca9, #9b3cb3); /* Gradient for active item */
   border-radius: 10px;
   font-weight: bold; /* Highlight active item */
 }

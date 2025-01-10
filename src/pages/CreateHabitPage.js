@@ -11,21 +11,28 @@ const CreateHabitPage = () => {
   const [successMessage, setSuccessMessage] = useState("");
 
   const handleSaveHabit = () => {
+    if (!habitName.trim()) {
+      alert("Please enter a habit name.");
+      return;
+    }
     setSuccessMessage("Habit added successfully!");
     setTimeout(() => setSuccessMessage(""), 3000);
+    setHabitName("");
+    setFrequency("Daily");
+    setReminder("");
+    setCategory("Fitness");
   };
 
   return (
     <div className="create-habit-page">
-      {/* Sidebar */}
       <Sidebar />
-
-      {/* Main Content */}
       <div className="main-content">
         <Topbar />
-        <div className="habit-form-container">
+        <div className="header-card">
           <h2>Create New Habit</h2>
           <p>Organize your day with better habits</p>
+        </div>
+        <div className="habit-form-container">
           <form
             onSubmit={(e) => {
               e.preventDefault();
