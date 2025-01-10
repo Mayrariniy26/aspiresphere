@@ -1,5 +1,5 @@
 /* Global Light Mode */
-body.light, .dark {
+body.light, .light {
   --sidebar-bg: #6a5acd; /* Purple */
   --sidebar-text: #ffffff; /* White */
   --sidebar-hover: #836fff; /* Light Lavender */
@@ -13,7 +13,7 @@ body.light, .dark {
 }
 
 /* Global Dark Mode */
-body.dark, .light {
+body.dark, .dark {
   --sidebar-bg: #1e3a5f; /* Dark Blue for Sidebar */
   --sidebar-text: #d1d5db; /* Light Gray Text */
   --sidebar-hover: #2b6cb0; /* Hover Blue */

@@ -1,15 +1,24 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 import "../styles/Dashboard.css";
 
 const DashboardContent = () => {
+  const navigate = useNavigate(); // Hook for navigation
+
   return (
     <div className="dashboard-content">
-      <h2 className="welcome gradient-text">WELCOME MAYRA !!</h2>
+      <h2 className="welcome">WELCOME MAYRA !!</h2>
       <p className="dashboard-description">
         Your journey to success starts here—tick off your habits, conquer
         challenges, and unlock your best self!
       </p>
-      <button className="add-habit-btn">+ Add Habit</button>
+      {/* Add Habit Button */}
+      <button
+        className="add-habit-btn"
+        onClick={() => navigate("/create-habit")} // Navigate to Create Habit page
+      >
+        + Add Habit
+      </button>
       <div className="habit-progress">
         <h3>Your Habits</h3>
         <div className="habit">
