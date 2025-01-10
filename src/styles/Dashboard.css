@@ -1,13 +1,19 @@
+/* Dashboard Layout */
 .dashboard-page {
   display: flex;
+  flex-direction: row; /* Sidebar and main content side by side */
+  height: 100vh; /* Full viewport height */
 }
 
+/* Main Content */
 .main-content {
   flex: 1;
   padding: 20px;
   background-color: var(--background-light, #f8f9fa); /* Light background */
+  overflow-y: auto; /* Allow scrolling if content overflows */
 }
 
+/* Top Bar */
 .topbar {
   display: flex;
   justify-content: space-between;
@@ -15,74 +21,81 @@
   background-color: var(--sidebar-bg, #6a5acd); /* Match Sidebar color */
   color: #ffffff;
   padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100; /* Ensure it stays on top */
 }
 
-.dashboard-content {
-  text-align: center;
-  margin-top: 20px;
-}
-
+/* Welcome Section */
 .welcome {
-  
-    font-size: 3rem; /* Adjust size */
-    font-weight: bold;
-    text-align: center;
-    background: linear-gradient(90deg, #ff99cc, #ff7eb3, #6a5acd, #5eead4); /* More Pink, Purple, Blue */
-    -webkit-background-clip: text; /* Clip gradient to text */
-    -webkit-text-fill-color: transparent; /* Make the text transparent */
-    text-fill-color: transparent; /* Standard property */
-    margin: 20px 0; /* Add spacing */
+  font-size: 3rem; /* Adjust size */
+  font-weight: bold;
+  text-align: center;
+  background: linear-gradient(90deg, #ff99cc, #ff7eb3, #6a5acd, #5eead4); /* Pink, Purple, Blue gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 20px 0;
 }
 
+/* Dashboard Description */
 .dashboard-description {
-  font-size: 1.2rem; /* Slightly larger font for readability */
+  font-size: 1.2rem; /* Slightly larger font */
   line-height: 1.8; /* Improve text spacing */
   text-align: center; /* Center-align the text */
-  margin: 20px 0; /* Add space above and below */
-  color: #4b0082; /* Eggplant color for text */
-  font-weight: 500; /* Medium weight for better visibility */
-  font-family: "Poppins", sans-serif; /* Clean and modern font */
-  max-width: 800px; /* Limit the width for better alignment */
-  margin-left: auto; /* Center horizontally */
-  margin-right: auto; /* Center horizontally */
-}
-.add-habit-btn {
-  background: linear-gradient(90deg, #ff7eb3, #6a5acd); /* Gradient background */
-  color: white; /* White text for contrast */
-  border: none; /* Remove default border */
-  border-radius: 30px; /* Rounded button */
-  padding: 12px 25px; /* Adjust padding for size */
-  font-size: 1.2rem; /* Slightly larger text */
-  font-weight: bold; /* Emphasize text */
-  cursor: pointer; /* Pointer cursor on hover */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover animations */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  margin: 20px 0;
+  color: #4b0082; /* Eggplant color */
+  font-weight: 500; /* Medium weight */
+  font-family: "Poppins", sans-serif;
+  max-width: 800px; /* Limit width for better alignment */
+  margin-left: auto;
+  margin-right: auto;
 }
 
+/* Add Habit Button */
+.add-habit-btn {
+  background: linear-gradient(90deg, #ff7eb3, #6a5acd); /* Gradient background */
+  color: white;
+  border: none;
+  border-radius: 30px; /* Rounded button */
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  display: block; /* Ensures it behaves as a block element */
+  margin: 20px auto; /* Centers the button horizontally */
+}
 .add-habit-btn:hover {
-  transform: scale(1.05); /* Slight zoom effect */
-  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  transform: scale(1.05); /* Slight zoom */
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
 }
 
 .add-habit-btn:active {
-  transform: scale(0.95); /* Slight compression on click */
-  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); /* Reduce shadow */
+  transform: scale(0.95); /* Compression effect */
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
 }
 
+/* Habit Progress Section */
 .habit-progress {
   margin-top: 30px;
+  background-color: #ffffff; /* White background for section */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
 }
+
 .habit-progress h3 {
-  font-size: 2rem; /* Larger font size for emphasis */
+  font-size: 2rem;
   font-weight: bold;
-  text-align: left; /* Center the heading */
-  color: #4b0082; /* Eggplant color for text */
-  margin-bottom: 20px; /* Space below the heading */
-  text-transform: uppercase; /* Make the text uppercase */
-  letter-spacing: 2px; /* Add some spacing between letters */
+  text-align: center;
+  color: #4b0082; /* Eggplant color */
+  margin-bottom: 20px;
+  text-transform: uppercase; /* Uppercase text */
+  letter-spacing: 2px; /* Add spacing */
   background: linear-gradient(90deg, #ff7eb3, #6a5acd); /* Gradient text */
-  -webkit-background-clip: text; /* Clip the gradient to the text */
-  -webkit-text-fill-color: transparent; /* Make text transparent to show the gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .habit {
@@ -93,9 +106,54 @@
   padding: 10px;
   border: 1px solid var(--accent-text, #836fff);
   border-radius: 5px;
+  background-color: #f9f9ff; /* Soft background */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .habit span {
   font-size: 1rem;
   color: var(--accent-text, #6a5acd);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .dashboard-page {
+    flex-direction: column; /* Stack sidebar and content */
+  }
+
+  .main-content {
+    padding: 15px;
+  }
+
+  .welcome {
+    font-size: 2.5rem;
+  }
+
+  .dashboard-description {
+    font-size: 1rem;
+  }
+
+  .habit-progress h3 {
+    font-size: 1.5rem;
+  }
+
+  .add-habit-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome {
+    font-size: 2rem;
+  }
+
+  .dashboard-description {
+    font-size: 0.9rem;
+  }
+
+  .add-habit-btn {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
 }

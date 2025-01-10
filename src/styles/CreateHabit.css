@@ -1,0 +1,110 @@
+/* Main Content Styling */
+.create-habit-page {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .main-content {
+    flex: 1;
+    overflow-y: auto;
+    background: var(--background);
+    color: var(--text-color);
+    padding: 20px;
+  }
+  
+  .habit-form-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .habit-form-container h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #4b0082;
+  }
+  
+  .habit-form-container p {
+    font-size: 1.1rem;
+    color: #4b0082;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #4b0082;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  .form-group input:focus {
+    border-color: #6a5acd;
+    outline: none;
+  }
+  
+  .save-habit-btn {
+    background: linear-gradient(90deg, #ff7eb3, #6a5acd);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .save-habit-btn:hover {
+    background: linear-gradient(90deg, #6a5acd, #836fff);
+    transform: scale(1.05);
+  }
+  
+  .success-message {
+    margin-top: 20px;
+    color: white;
+    background-color: #4b0082;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  /* Dropdown Styling */
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: white;
+    color: #4b0082; /* Eggplant color for text */
+  }
+  
+  select:focus {
+    border-color: #6a5acd;
+    outline: none;
+  }
+  
+  .form-group select {
+    background: linear-gradient(90deg, #f9f9ff, #ffffff);
+  }
+  

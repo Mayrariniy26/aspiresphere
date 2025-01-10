@@ -52,13 +52,3 @@
 .dark-mode-toggle:hover {
   background-color: #9370db; /* Hover effect */
 }
-
-/* Light Mode Adjustments */
-.light-mode .top-bar {
-  color: #4b0082; /* Eggplant text for light mode */
-}
-
-/* Dark Mode Adjustments */
-.dark-mode .top-bar {
-  color: #e0e0e0; /* Light text for dark mode */
-}

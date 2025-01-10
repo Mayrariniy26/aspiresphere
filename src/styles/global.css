@@ -1,5 +1,5 @@
 /* Global Light Mode */
-body.light {
+body.light, .dark {
   --sidebar-bg: #6a5acd; /* Purple */
   --sidebar-text: #ffffff; /* White */
   --sidebar-hover: #836fff; /* Light Lavender */
@@ -13,29 +13,19 @@ body.light {
 }
 
 /* Global Dark Mode */
-body.dark {
-  --sidebar-bg: #2f4f4f; /* Deep Slate Gray */
-  --sidebar-text: #ffffff; /* White */
-  --sidebar-hover: #6a5acd; /* Primary Purple */
-  --background: #2f4f4f; /* Deep Slate Gray */
-  --text-color: #fffafa; /* Snow White */
-  --accent-color: #6a5acd; /* Soft Purple */
-  --hover-color: #836fff; /* Light Lavender */
-  --button-bg: #6a5acd; /* Button background */
-  --button-text: #ffffff; /* Button text */
+body.dark, .light {
+  --sidebar-bg: #1e3a5f; /* Dark Blue for Sidebar */
+  --sidebar-text: #d1d5db; /* Light Gray Text */
+  --sidebar-hover: #2b6cb0; /* Hover Blue */
+  --background: #1a2a40; /* Dark Blue for Background */
+  --text-color: #f1f5f9; /* Light Gray for Text */
+  --accent-color: #3b82f6; /* Blue Accent */
+  --hover-color: #2563eb; /* Bright Blue Hover */
+  --button-bg: #2563eb; /* Bright Blue Button */
+  --button-text: #ffffff; /* White Text for Button */
   transition: background-color 0.3s, color 0.3s;
 }
-/* Light Mode */
-body.light, .light {
-  background-color: #f5f5f5; /* Light background */
-  color: #3d3d3d; /* Dark text for light mode */
-}
 
-/* Dark Mode */
-body.dark, .dark {
-  background-color: #2f4f4f; /* Dark background */
-  color: #fffafa; /* Light text for dark mode */
-}
 
 /* Smooth Transitions */
 body, .light, .dark {
