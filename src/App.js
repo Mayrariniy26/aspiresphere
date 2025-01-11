@@ -7,6 +7,7 @@ import HabitTrackingPage from "./pages/HabitTrackingPage";// Import HabitTrackin
 import StatisticsPage from "./pages/StatisticsPage"; // Import StatisticsPage
 import CommunitiesPage from "./pages/CommunitiesPage"; // Import CommunitiesPage
 import RewardsPage from "./pages/RewardsPage"; // Import RewardsPage
+import SettingsPage from "./pages/SettingsPage"; // Import SettingsPage
 
 const App = () => {
   return (
@@ -31,6 +32,9 @@ const App = () => {
 
        {/* Rewards Page Route */}
        <Route path="/rewards" element={<RewardsPage />} />
+
+       {/* Settings Page Route */}
+      <Route path="/settings" element={<SettingsPage />} />
     </Routes>
   );
 };

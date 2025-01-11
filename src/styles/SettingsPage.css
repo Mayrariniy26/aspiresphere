@@ -1,0 +1,104 @@
+.settings-page {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .main-content {
+    flex: 1;
+    overflow-y: auto;
+    background: var(--background);
+    color: var(--text-color);
+    padding: 20px;
+  }
+  
+  .header-card {
+    background: var(--sidebar-bg);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .profile-section {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid var(--accent-color);
+    margin-bottom: 10px;
+  }
+  
+  .change-text {
+    font-size: 0.9rem;
+    color: var(--accent-color);
+    cursor: pointer;
+    text-decoration: underline;
+    margin-bottom: 20px;
+  }
+  
+  .input-group {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .input-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--text-color);
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .input-group input:focus {
+    border-color: var(--accent-color);
+    outline: none;
+  }
+  
+  .settings-section {
+    margin-bottom: 30px;
+  }
+  
+  .checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .checkbox-group label {
+    font-size: 1rem;
+    color: var(--text-color);
+  }
+  
+  .save-section {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .save-btn {
+    background: linear-gradient(90deg, #ff7eb3, #6a5acd);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .save-btn:hover {
+    background: linear-gradient(90deg, #6a5acd, #836fff);
+    transform: scale(1.05);
+  }
+  
