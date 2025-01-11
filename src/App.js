@@ -6,6 +6,7 @@ import CreateHabitPage from "./pages/CreateHabitPage";// Import CreateHabitPage
 import HabitTrackingPage from "./pages/HabitTrackingPage";// Import HabitTrackingPage
 import StatisticsPage from "./pages/StatisticsPage"; // Import StatisticsPage
 import CommunitiesPage from "./pages/CommunitiesPage"; // Import CommunitiesPage
+import RewardsPage from "./pages/RewardsPage"; // Import RewardsPage
 
 const App = () => {
   return (
@@ -27,6 +28,9 @@ const App = () => {
        
        {/* Communities Page Route */}
        <Route path="/communities" element={<CommunitiesPage />} />
+
+       {/* Rewards Page Route */}
+       <Route path="/rewards" element={<RewardsPage />} />
     </Routes>
   );
 };

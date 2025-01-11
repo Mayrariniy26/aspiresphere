@@ -1,0 +1,108 @@
+/* Rewards Page Styles */
+.rewards-page {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .main-content {
+    flex: 1;
+    overflow-y: auto;
+    background: var(--background);
+    color: var(--text-color);
+    padding: 20px;
+  }
+  
+  .header-card {
+    background: var(--sidebar-bg);
+    color: var(--text-light);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .points-section {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .points-section h1 {
+    font-size: 3rem;
+    color: var(--text-light); /* Ensure visibility in dark mode */
+  }
+  
+  .badges-section {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .badges {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .badge {
+    background: var(--badge-bg, white); /* Default white for light mode */
+    border: 2px solid var(--accent-color);
+    border-radius: 10px;
+    padding: 20px;
+    width: 150px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s;
+  }
+  
+  .badge:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .badge img {
+    width: 40px; /* Adjust size for better visibility */
+    margin-top: 10px;
+  }
+  
+  .unlocked {
+    background: var(--badge-unlocked-bg, #f0f8ff); /* Adjust for better visibility */
+    color: var(--text-dark, #000); /* Text color for unlocked badges */
+  }
+  
+  .locked {
+    background: var(--badge-locked-bg, #f8f8f8);
+    color: var(--text-muted, #888); /* Muted color for locked badges */
+  }
+  
+  /* Adjust text color for dark mode */
+  body.dark .unlocked {
+    background: #2f4f4f; /* Darker background for dark mode */
+    color: #ffffff; /* White text for visibility */
+  }
+  
+  body.dark .locked {
+    background: #1c1c1e; /* Darker gray for dark mode */
+    color: #aaaaaa; /* Muted text for locked badges */
+  }
+  
+  .redeem-section {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .redeem-btn {
+    background: linear-gradient(90deg, #ff7eb3, #6a5acd);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .redeem-btn:hover {
+    background: linear-gradient(90deg, #6a5acd, #836fff);
+    transform: scale(1.05);
+  }
+  
