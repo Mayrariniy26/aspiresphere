@@ -6,12 +6,60 @@ import "../styles/HabitTracking.css"; // Ensure you have the CSS file
 
 const HabitTrackingPage = () => {
   const [filter, setFilter] = useState("Today");
+  const [chartData, setChartData] = useState(getChartData("Today"));
 
   const habits = [
     { name: "Exercise", progress: 80 },
     { name: "Reading", progress: 50 },
     { name: "Meditation", progress: 30 },
   ];
+
+  // Function to get chart data based on the filter
+  function getChartData(filter) {
+    switch (filter) {
+      case "Today":
+        return {
+          labels: ["Morning", "Afternoon", "Evening"],
+          datasets: [
+            {
+              label: "Habits Progress",
+              data: [50, 80, 40],
+              backgroundColor: ["#6a5acd", "#836fff", "#9370db"],
+            },
+          ],
+        };
+      case "This Week":
+        return {
+          labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+          datasets: [
+            {
+              label: "Habits Progress",
+              data: [60, 70, 50, 90, 80, 40, 100],
+              backgroundColor: ["#6a5acd", "#836fff", "#9370db", "#6a5acd", "#836fff", "#9370db", "#6a5acd"],
+            },
+          ],
+        };
+      case "This Month":
+        return {
+          labels: Array.from({ length: 30 }, (_, i) => `Day ${i + 1}`),
+          datasets: [
+            {
+              label: "Habits Progress",
+              data: Array.from({ length: 30 }, () => Math.floor(Math.random() * 100)),
+              backgroundColor: "#6a5acd",
+            },
+          ],
+        };
+      default:
+        return {};
+    }
+  }
+
+  const handleFilterChange = (e) => {
+    const selectedFilter = e.target.value;
+    setFilter(selectedFilter);
+    setChartData(getChartData(selectedFilter)); // Update chart data
+  };
 
   return (
     <div className="habit-tracking-page">
@@ -31,11 +79,7 @@ const HabitTrackingPage = () => {
         {/* Filter Section */}
         <div className="filter-section">
           <label htmlFor="filter">Filter By:</label>
-          <select
-            id="filter"
-            value={filter}
-            onChange={(e) => setFilter(e.target.value)}
-          >
+          <select id="filter" value={filter} onChange={handleFilterChange}>
             <option value="Today">Today</option>
             <option value="This Week">This Week</option>
             <option value="This Month">This Month</option>
@@ -57,7 +101,7 @@ const HabitTrackingPage = () => {
         {/* Chart Section */}
         <div className="chart-section">
           <h3>Habit Completion Overview</h3>
-          <HabitChart />
+          <HabitChart chartData={chartData} />
         </div>
       </div>
     </div>

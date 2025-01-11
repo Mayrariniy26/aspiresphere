@@ -3,47 +3,63 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: transparent; /* No background */
-  color: var(--topbar-text, #4b0082); /* Default Eggplant text */
+  position: sticky; /* Keeps it fixed at the top during scrolling */
+  top: 0; /* Position it at the top */
+  z-index: 1000; /* Ensure it's above other content */
+  background-color: var(--background, white); /* Background color for light/dark modes */
+  color: var(--topbar-text, #4b0082); /* Text color */
   padding: 15px 20px;
-  position: sticky;
-  top: 0;
-  z-index: 10; /* Ensures it stays on top */
-  transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transitions for theme changes */
 }
 
-/* Logo */
+/* Logo in Top Bar */
 .top-bar-logo img {
-  width: 120px; /* Larger logo size */
+  width: 120px; /* Logo size */
   height: auto;
-  border-radius: 15px; /* Curved border */
+  border-radius: 15px; /* Optional rounded edges */
+  border: 2px solid var(--topbar-border, #4b0082); /* Border for emphasis */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-  border: 2px solid var(--topbar-border, #4b0082); /* Optional border for emphasis */
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animations */
 }
 
 .top-bar-logo img:hover {
-  transform: scale(1.05); /* Slight zoom effect on hover */
+  transform: scale(1.05); /* Slight zoom on hover */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
 }
 
 /* Title */
 .top-bar-title {
-  font-size: 4rem; /* Adjusted for responsiveness */
+  font-size: 2.5rem; /* Title size */
   font-weight: bold;
+  color: var(--text-color, #4b0082); /* Adapt to light/dark modes */
+  flex-grow: 1; /* Center title between logo and toggle button */
   text-align: center;
-  flex-grow: 1; /* Center the title between logo and toggle button */
-  color: var(--topbar-text, #4b0082); /* Default Eggplant text */
-  transition: color 0.3s ease; /* Smooth transition for color changes */
+  transition: color 0.3s ease; /* Smooth transition for text color */
+}
+/* Title */
+.top-bar-title {
+  font-size: 2.5rem; /* Title size */
+  font-weight: bold;
+  color: #4b0082; /* Eggplant color */
+  flex-grow: 1; /* Center title between logo and toggle button */
+  text-align: center;
+  transition: color 0.3s ease; /* Smooth transition for text color */
+}
+
+/* Dark Mode Adjustments */
+body.dark .top-bar-title {
+  color: #836fff; /* Light Lavender for dark mode (optional contrast) */
 }
 
 /* Dark Mode Adjustments */
 body.dark .top-bar {
-  color: #ffffff; /* White text for dark mode */
+  background-color: #220e4a; /* Dark background for dark mode */
+  color: #ffffff; /* Text color for dark mode */
 }
 
 body.dark .top-bar-title {
-  color: #ffffff; /* Ensure title text changes to white in dark mode */
+  color: #ffffff; /* Title text adjusts to white in dark mode */
 }
 
 body.dark .top-bar-logo img {
@@ -59,12 +75,18 @@ body.dark .top-bar-logo img {
   border-radius: 10px;
   cursor: pointer;
   font-size: 1rem;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.3s, transform 0.3s; /* Smooth animations */
 }
 
 .dark-mode-toggle:hover {
   background-color: #9370db; /* Hover effect */
-  transform: scale(1.1); /* Slightly larger on hover */
+  transform: scale(1.1); /* Slight zoom */
+}
+
+/* Main Content */
+.main-content {
+  padding-top: 70px; /* Adjust padding to account for sticky top bar height */
+  overflow-y: auto; /* Enable scrolling within the main content */
 }
 
 /* Responsive Adjustments */
@@ -103,7 +125,7 @@ body.dark .top-bar-logo img {
   }
 
   .top-bar-title {
-    font-size: 1.5rem; /* Reduce title size for smaller screens */
+    font-size: 1.5rem; /* Reduce title size further */
   }
 
   .dark-mode-toggle {

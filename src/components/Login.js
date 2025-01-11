@@ -3,7 +3,7 @@ import "../styles/Login.css"; // Import your CSS
 import loginImage from "../assets/login.png"; // Left-side image
 import aspireLogo from "../assets/AspireSphere_Logo.png"; // AspireSphere logo
 
-const Login = () => {
+const Login = ({ onLogin }) => {
   const [theme, setTheme] = useState("light"); // Default theme is light
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -21,11 +21,13 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (email && password) {
+
+    // Dummy validation logic
+    if (email === "cjmayra@gmail.com" && password === "1234") {
       setError(""); // Clear error on success
-      alert("Logged in successfully!"); // Simulate login success
+      onLogin(); // Call the onLogin function (passed as a prop)
     } else {
-      setError("Please enter valid credentials"); // Show error
+      setError("Invalid email or password"); // Show error
     }
   };
 
@@ -51,23 +53,31 @@ const Login = () => {
         <form className="login-form" onSubmit={handleSubmit}>
           <h2>Welcome Back!</h2>
           {error && <p className="error-text">{error}</p>} {/* Error message */}
-          <input
-            type="email"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-            aria-label="Email"
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-            aria-label="Password"
-          />
-          <button type="submit">Login</button>
+          <div className="form-group">
+            <label>Email</label>
+            <input
+              type="email"
+              placeholder="Enter your email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              aria-label="Email"
+            />
+          </div>
+          <div className="form-group">
+            <label>Password</label>
+            <input
+              type="password"
+              placeholder="Enter your password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+              aria-label="Password"
+            />
+          </div>
+          <button type="submit" className="login-btn">
+            Login
+          </button>
           <div className="form-links">
             <a href="/forgot-password" className="forgot-password">
               Forgot Password?

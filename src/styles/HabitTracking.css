@@ -1,169 +1,208 @@
 /* Main Layout */
 .habit-tracking-page {
-    display: flex;
-    height: 100vh;
-  }
-  
-  .main-content {
-    flex: 1;
-    padding: 20px;
-    background: var(--background, #f8f9fa);
-    color: var(--text-color, #3d3d3d);
-    overflow-y: auto;
-  }
-  
-  /* Header Card */
-  .header-card {
-    background-color: #563d7c; /* Purple background */
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    text-align: left;
-  }
-  
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  background: var(--background, #f8f9fa);
+  color: var(--text-color, #3d3d3d);
+  overflow-y: auto;
+}
+
+/* Header Card */
+.header-card {
+  background-color: #563d7c; /* Purple background */
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.header-card h2 {
+  font-size: 2rem;
+  margin: 0;
+  font-weight: bold;
+}
+
+.header-card p {
+  font-size: 1.2rem;
+  margin: 5px 0 0;
+}
+
+/* Filter Section */
+.filter-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.filter-section label {
+  font-weight: bold;
+  color: var(--text-color, #4b0082);
+}
+
+.filter-section select {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: white;
+  color: #4b0082; /* Eggplant text */
+}
+
+.filter-section select:focus {
+  border-color: #6a5acd;
+  outline: none;
+}
+
+/* Tracked Habits */
+.tracked-habits {
+  margin-bottom: 30px;
+}
+
+.tracked-habits h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-color, #4b0082);
+  margin-bottom: 20px;
+}
+
+.habit-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.habit-item span {
+  font-size: 1rem;
+  color: var(--primary-color, #4b0082);
+}
+
+.habit-item progress {
+  flex: 1;
+  margin: 0 10px;
+  height: 10px;
+  border-radius: 5px;
+  appearance: none;
+}
+
+.habit-item progress::-webkit-progress-bar {
+  background-color: #f1f1f1;
+  border-radius: 5px;
+}
+
+.habit-item progress::-webkit-progress-value {
+  background-color: #6a5acd;
+  border-radius: 5px;
+}
+
+/* Completion Overview */
+.completion-overview {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.completion-overview h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-color, #4b0082);
+  margin-bottom: 20px;
+}
+
+.chart-placeholder {
+  height: 200px;
+  background-color: #f9f9ff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #4b0082;
+}
+
+/* Chart Container */
+.chart-container {
+  max-width: 400px; /* Reduce chart size */
+  margin: 0 auto 30px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.chart-container canvas {
+  max-width: 100%; /* Ensure responsiveness */
+  height: auto;
+}
+
+/* Encouragement Message */
+.encouragement-message {
+  background: #563d7c;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
   .header-card h2 {
-    font-size: 2rem;
-    margin: 0;
-    font-weight: bold;
+    font-size: 1.8rem;
   }
-  
+
   .header-card p {
-    font-size: 1.2rem;
-    margin: 5px 0 0;
+    font-size: 1rem;
   }
-  
-  /* Filter Section */
+
   .filter-section {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
+    flex-wrap: wrap;
   }
-  
-  .filter-section label {
-    margin-right: 10px;
-    font-weight: bold;
-    color: var(--text-color, #4b0082);
-  }
-  
-  .filter-section select {
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-sizing: border-box;
-    background-color: white;
-    color: #4b0082; /* Eggplant text */
-  }
-  
-  .filter-section select:focus {
-    border-color: #6a5acd;
-    outline: none;
-  }
-  
-  /* Tracked Habits */
-  .tracked-habits {
-    margin-bottom: 30px;
-  }
-  
+
   .tracked-habits h3 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--primary-color, #4b0082);
-    margin-bottom: 20px;
+    font-size: 1.3rem;
   }
-  
-  .habit-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 10px;
-  }
-  
+
   .habit-item span {
-    font-size: 1rem;
-    color: var(--primary-color, #4b0082);
+    font-size: 0.9rem;
   }
-  
-  .habit-item progress {
-    flex: 1;
-    margin: 0 10px;
-    height: 10px;
-    border-radius: 5px;
-    appearance: none;
-  }
-  
-  .habit-item progress::-webkit-progress-bar {
-    background-color: #f1f1f1;
-    border-radius: 5px;
-  }
-  
-  .habit-item progress::-webkit-progress-value {
-    background-color: #6a5acd;
-    border-radius: 5px;
-  }
-  
-  /* Completion Overview */
-  .completion-overview {
-    margin-bottom: 30px;
-    text-align: center;
-  }
-  
-  .completion-overview h3 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--primary-color, #4b0082);
-    margin-bottom: 20px;
-  }
-  
-  .chart-placeholder {
-    height: 200px;
-    background-color: #f9f9ff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #4b0082;
-  }
-  
-  /* Encouragement Message */
-  .encouragement-message {
-    background: #563d7c;
-    color: white;
-    padding: 15px;
-    border-radius: 10px;
-    text-align: center;
-    font-size: 1.2rem;
-    font-weight: bold;
-  }
-  
-  .habit-tracking-page {
-    display: flex;
-  }
-  
-  .main-content {
-    flex: 1;
-    padding: 20px;
-    background-color: var(--background);
-  }
-  
-  .habit-tracking-header {
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  
-  .habit-tracking-header h2 {
-    font-size: 2rem;
-    color: #4b0082;
-  }
-  
+
   .chart-container {
-    max-width: 800px;
+    max-width: 100%; /* Full width on smaller screens */
     margin: 0 auto;
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   }
-  
+
+  .encouragement-message {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-card h2 {
+    font-size: 1.5rem;
+  }
+
+  .header-card p {
+    font-size: 0.9rem;
+  }
+
+  .tracked-habits h3 {
+    font-size: 1.2rem;
+  }
+
+  .habit-item span {
+    font-size: 0.8rem;
+  }
+
+  .chart-container {
+    padding: 15px;
+  }
+}

@@ -17,7 +17,7 @@ const Topbar = () => {
       <h1 className="top-bar-title">ASPIRESPHERE</h1>
 
       {/* Toggle Button on the right */}
-      <button className="theme-toggle" onClick={toggleTheme}>
+      <button className="dark-mode-toggle" onClick={toggleTheme}>
         {theme === "light" ? "Switch to Dark Mode" : "Switch to Light Mode"}
       </button>
     </div>
