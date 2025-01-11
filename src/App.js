@@ -4,6 +4,7 @@ import LoginPage from "./pages/LoginPage"; // Import LoginPage
 import DashboardPage from "./pages/DashboardPage"; // Import DashboardPage
 import CreateHabitPage from "./pages/CreateHabitPage";// Import CreateHabitPage
 import HabitTrackingPage from "./pages/HabitTrackingPage";// Import HabitTrackingPage
+import StatisticsPage from "./pages/StatisticsPage"; // Import StatisticsPage
 
 const App = () => {
   return (
@@ -19,6 +20,9 @@ const App = () => {
       
       {/* Track Habit Route */}
       <Route path="/track-habits" element={<HabitTrackingPage />} />
+
+       {/* Statistics Page Route */}
+       <Route path="/statistics" element={<StatisticsPage />} />
     </Routes>
   );
 };

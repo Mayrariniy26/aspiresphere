@@ -1,0 +1,101 @@
+.statistics-page {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .main-content {
+    flex: 1;
+    overflow-y: auto;
+    background: var(--background);
+    color: var(--text-color);
+    padding: 20px;
+  }
+  
+  /* Header Section */
+  .header-card {
+    background: #4b0082;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Completion Stats */
+  .completion-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+  }
+  
+  .stat-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+    margin: 0 10px;
+  }
+  
+  .stat-card h3 {
+    color: #4b0082;
+    margin-bottom: 10px;
+  }
+  
+  .stat-card p {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #6a5acd;
+  }
+  
+  /* Charts Section */
+  .charts-section {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+  }
+  
+  .chart {
+    flex: 1;
+    margin: 20px;
+    text-align: center;
+  }
+  
+  .chart canvas {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  
+  .chart h3 {
+    color: #4b0082;
+    margin-bottom: 10px;
+  }
+  
+  .chart img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+  
+  /* Insights Section */
+  .insights-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .insights-card h3 {
+    color: #4b0082;
+    margin-bottom: 10px;
+  }
+  
+  .insights-card p {
+    font-size: 1.2rem;
+    color: #4b0082;
+  }
+  

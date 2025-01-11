@@ -29,7 +29,7 @@
 
 /* Title */
 .top-bar-title {
-  font-size: 5rem; /* Adjusted for responsiveness */
+  font-size: 4rem; /* Adjusted for responsiveness */
   font-weight: bold;
   text-align: center;
   flex-grow: 1; /* Center the title between logo and toggle button */
