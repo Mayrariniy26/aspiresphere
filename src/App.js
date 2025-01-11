@@ -5,6 +5,7 @@ import DashboardPage from "./pages/DashboardPage"; // Import DashboardPage
 import CreateHabitPage from "./pages/CreateHabitPage";// Import CreateHabitPage
 import HabitTrackingPage from "./pages/HabitTrackingPage";// Import HabitTrackingPage
 import StatisticsPage from "./pages/StatisticsPage"; // Import StatisticsPage
+import CommunitiesPage from "./pages/CommunitiesPage"; // Import CommunitiesPage
 
 const App = () => {
   return (
@@ -23,6 +24,9 @@ const App = () => {
 
        {/* Statistics Page Route */}
        <Route path="/statistics" element={<StatisticsPage />} />
+       
+       {/* Communities Page Route */}
+       <Route path="/communities" element={<CommunitiesPage />} />
     </Routes>
   );
 };

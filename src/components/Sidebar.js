@@ -47,7 +47,7 @@ const Sidebar = () => {
           </Link>
         </li>
         <li>
-          <Link to="/community">
+          <Link to="/communities">
             <img src={groupsIcon} alt="Community Icon" className="menu-icon" />
             <span>Community</span>
           </Link>

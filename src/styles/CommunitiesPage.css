@@ -1,0 +1,91 @@
+.communities-page {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .main-content {
+    flex: 1;
+    overflow-y: auto;
+    background: var(--background);
+    color: var(--text-color);
+    padding: 20px;
+  }
+  
+  .header-card {
+    background: var(--sidebar-bg, #6a5acd);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .header-card h2 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .header-card p {
+    font-size: 1.1rem;
+    margin-top: 10px;
+  }
+  
+  .groups-section,
+  .challenges-section {
+    margin-top: 20px;
+  }
+  
+  .groups-section h3,
+  .challenges-section h3 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 15px;
+  }
+  
+  .group-item,
+  .challenge-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    background: var(--background-light, #ffffff);
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .group-item span,
+  .challenge-item span {
+    flex: 1;
+    font-size: 1rem;
+  }
+  
+  .group-item progress,
+  .challenge-item progress {
+    flex: 1;
+    margin: 0 10px;
+  }
+  
+  .join-groups {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .join-groups-btn {
+    background: linear-gradient(90deg, #ff7eb3, #6a5acd);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .join-groups-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
