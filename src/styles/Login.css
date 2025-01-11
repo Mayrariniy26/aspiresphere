@@ -88,11 +88,19 @@
 body.light .login-form {
   --form-border: #ccc; /* Light border */
   --form-bg: #ffffff; /* White background */
+  --text-color: #333333; /* Light text color */
+  --input-bg: #ffffff; /* Input background */
+  --input-text: #333333; /* Input text color */
+  --input-border: #ccc; /* Input border color */
 }
 
 body.dark .login-form {
   --form-border: #666; /* Dark border */
   --form-bg: #444444; /* Dark background */
+  --text-color: #ffffff; /* Light text color */
+  --input-bg: #555555; /* Input background */
+  --input-text: #ffffff; /* Input text color */
+  --input-border: #888888; /* Input border color */
 }
 
 .login-form h2 {
@@ -108,10 +116,14 @@ body.dark .login-form {
   border: 1px solid var(--input-border);
   border-radius: 5px;
   background-color: var(--input-bg);
-  color: var(--input-text);
+  color: var(--input-text); /* Ensure text is visible */
   font-size: 1rem;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
   box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+.login-form input::placeholder {
+  color: var(--input-text); /* Placeholder text inherits input color */
 }
 
 .login-form input:focus {
@@ -166,23 +178,11 @@ body.dark .login-form {
 body.light {
   background-color: #f8f9fa; /* Light Gray */
   color: #333333; /* Dark Text */
-  --right-bg: #ffffff; /* Form background in Light Mode */
-  --input-bg: #ffffff; /* Input background in Light Mode */
-  --input-text: #333333; /* Input text in Light Mode */
-  --input-border: #ccc; /* Input border in Light Mode */
-  --text-color: #333333; /* Form text in Light Mode */
-  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 body.dark {
   background-color: #2f4f4f; /* Dark Slate Gray */
   color: #f5f5f5; /* Light Text */
-  --right-bg: #444444; /* Form background in Dark Mode */
-  --input-bg: #555555; /* Input background in Dark Mode */
-  --input-text: #f5f5f5; /* Input text in Dark Mode */
-  --input-border: #666666; /* Input border in Dark Mode */
-  --text-color: #f5f5f5; /* Form text in Dark Mode */
-  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Responsive design */

@@ -2,7 +2,20 @@ import React from "react";
 import Sidebar from "../components/Sidebar";
 import Topbar from "../components/Topbar";
 import { Bar, Pie } from "react-chartjs-2";
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  ArcElement,
+  Title,
+  Tooltip,
+  Legend,
+} from "chart.js"; // Import required Chart.js components
 import "../styles/StatisticsPage.css";
+
+// Register required Chart.js components
+ChartJS.register(CategoryScale, LinearScale, BarElement, ArcElement, Title, Tooltip, Legend);
 
 const StatisticsPage = () => {
   const barData = {
@@ -29,6 +42,48 @@ const StatisticsPage = () => {
         borderWidth: 1,
       },
     ],
+  };
+
+  const barOptions = {
+    responsive: true,
+    plugins: {
+      legend: {
+        display: false, // Disable legend for bar chart
+      },
+      title: {
+        display: true,
+        text: "Weekly Habit Progress",
+      },
+    },
+    scales: {
+      x: {
+        title: {
+          display: true,
+          text: "Days of the Week",
+        },
+      },
+      y: {
+        title: {
+          display: true,
+          text: "Progress (%)",
+        },
+        min: 0,
+        max: 100,
+      },
+    },
+  };
+
+  const pieOptions = {
+    responsive: true,
+    plugins: {
+      legend: {
+        position: "top",
+      },
+      title: {
+        display: true,
+        text: "Habit Completion Overview",
+      },
+    },
   };
 
   return (
@@ -62,11 +117,11 @@ const StatisticsPage = () => {
         <div className="charts-section">
           <div className="chart weekly-progress">
             <h3>Weekly Progress</h3>
-            <Bar data={barData} />
+            <Bar data={barData} options={barOptions} />
           </div>
           <div className="chart completion-overview">
             <h3>Completion Overview</h3>
-            <Pie data={pieData} />
+            <Pie data={pieData} options={pieOptions} />
           </div>
         </div>
 
