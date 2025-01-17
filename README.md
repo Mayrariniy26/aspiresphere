@@ -2,6 +2,8 @@
 
 AspireSphere is a habit-tracking application designed to enhance productivity, personal growth, and community engagement. By incorporating personalized rewards, insightful analytics, and community challenges, AspireSphere transforms habit-building into a motivating and enjoyable journey.
 
+![AspireSphere Login Screen](./src/assets/image.png)
+
 ## Features
 
 ### 1. **User Authentication**
@@ -120,5 +122,5 @@ This project is licensed under the MIT License. See the LICENSE file for details
 ---
 ### Contact
 **Author**: Mayrariniy C.J  
-**Email**: mayrariniy@example.com  
+**Email**: mayrariniycharlesjeyakumar@gmail.com  
 **GitHub**: [Mayrariniy26](https://github.com/Mayrariniy26)
